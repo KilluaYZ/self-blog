@@ -408,16 +408,6 @@ void print_map() {
 
 
 
-#### 附：贪吃蛇代码
-
-考虑到代码整个代码有500多行，直接粘在这里严重影响观感，复制起来也不方便，所以给大家提供了下载链接：
-
-snake.cpp [download](http://43.138.62.72/data/bad-code-proj/code/snake.cpp)
-
-代码现在还有BUG，~~我没有写赢了后的处理逻辑，就是说，这游戏现在没法赢，~~方向用w,s,a,d控制，编写代码时借鉴了[这篇文章](https://blog.csdn.net/chenlong_cxy/article/details/119765659?ops_request_misc=%7B%22request%5Fid%22%3A%22166131931616781667818679%22%2C%22scm%22%3A%2220140713.130102334..%22%7D&request_id=166131931616781667818679&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_positive~default-2-119765659-null-null.142^v42^pc_rank_34_1,185^v2^control&utm_term=c语言贪吃蛇&spm=1018.2226.3001.4187)，本文代码大家随意修改，随意发给想发的人，但请不要发在互联网上，例如发csdn、知乎啥的hh，谢谢配合。
-
-
-
 #### 后记
 
 第一次写博客，不知不觉写了这么多hh。一方面我现在也只是个本科学生，专业知识有所欠缺，另一方面，我最近还有别的事要忙，都是在半夜写博客，精神状态不佳，所以文中难免有错误、纰漏，欢迎大家指正！邮箱：ziyang12315@ruc.edu.cn
