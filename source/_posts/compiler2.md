@@ -1,7 +1,7 @@
 ---
 title: 编译原理实验SysY-语法分析器
 date: 2023-05-18 17:55:19
-tags: 编译 编译器 编译原理 yacc bison SysY
+tags: 编译
 ---
 > 源代码：[KilluaYZ/sys-y-compiler (github.com)](https://github.com/KilluaYZ/sys-y-compiler)
 ## 实验目的
@@ -71,9 +71,10 @@ T_IDENT, T_INTEGER_CONST, T_DEC_CONST, T_OCT_CONST, T_HEX_CONST,
 
 ### 语法
 语法部分按照yacc的语法规则编写yacc.y文件，该部分的重点是文法的编写，根据SysY语言定义将定义转换为对应文法。在按照定义编写语法后，出现了移进/归约冲突。
-![compiler2/image1.png](/images/compiler2/image1.png)
+![compiler2/image1.png](http://server.killuayz.top:8089/images/2023/05/26/compile2-image1.png)
+	
 根据bison提示可知是Stmt产生式出现问题。其中有问题的部分如下：
-![compiler2/image2.png](/images/compiler2/image2.png)
+![compiler2/image2.png](http://server.killuayz.top:8089/images/2023/05/26/compile2-image2.png)
 分析到Stmt时，程序不知道应该归约到Stmt还是继续移进T_ELSE。按照逻辑，在SysY代码中如果出现else语句，应该先移进else，而非将之前的if(...){...}归约为Stmt，所以else的优先级更高。根据yacc的规则，我们只需要规定一下两个产生式最后一个终结符的优先级即可，在这里，我们定义T_ELSE的优先级高于T_RIGHT_PARENTHESIS。
 ``` c++
 //yacc.y
@@ -82,7 +83,7 @@ T_IDENT, T_INTEGER_CONST, T_DEC_CONST, T_OCT_CONST, T_HEX_CONST,
 
 ```
 现在重新运行一次bison
-![compiler2/image3.png](/images/compiler2/image3.png)
+![compiler2/image3.png](http://server.killuayz.top:8089/images/2023/05/26/compile2-image3.png)
 可以看到它没有报错，所以移进归约冲突被解决了。
 
 ### lex和yacc衔接
@@ -118,7 +119,7 @@ int install_ident(yytokentype tokenType){
 ```
 
 在yacc指定某个token在yylval中储存的属性：
-![compiler2/image4.png](/images/compiler2/image4.png)
+![compiler2/image4.png](http://server.killuayz.top:8089/images/2023/05/26/compile2-image4.png)
 
 这样，在yacc分析时，就可以使用$1这样的方式拿到lex分析的结果了。
 
@@ -221,7 +222,7 @@ int main(){
     a = a + 1;
 }
 ```
-![compiler2/image5.png](/images/compiler2/image5.png)
+![compiler2/image5.png](http://server.killuayz.top:8089/images/2023/05/26/compile2-image5.png)
 输出的file.out如下：
 
 ```
@@ -259,7 +260,7 @@ CompUnit -> FuncDef
 
 ```
 编译出的语法树如下：
-![compiler2/image6.png](/images/compiler2/image6.png)
+![compiler2/image6.png](http://server.killuayz.top:8089/images/2023/05/26/compile2-image6.png)
 更多的例子请参考test目录下的文件。
 
 ## 体会总结

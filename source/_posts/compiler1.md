@@ -1,7 +1,7 @@
 ---
 title: 编译原理实验SysY-词法分析器
 date: 2023-05-18 15:03:58
-tags: 编译 编译器 编译原理 lex flex SysY
+tags: 编译
 ---
 > 源代码：[KilluaYZ/sys-y-compiler (github.com)](https://github.com/KilluaYZ/sys-y-compiler)
 # 1.实验目标
@@ -26,13 +26,13 @@ SysY是C语言的一个子集，与C语言类似，他将包含变量、函数�
 # 4.实现结果
 命令行模式：将lex源代码编译后运行即可进入命令行模式，输入简单的测试样例可以得到如下结果：
 
-![compiler1/image1.png](/images/compiler1/image1.png)
+![compiler1/image1.png](http://server.killuayz.top:8089/images/2023/05/26/compile1-image1.png)
 
 其中划线部分为源代码，下面的是词法分析器输出的结果。方框中的部分是识别了'\n'，表示新的一行。
 编译解析样例1.sy输出到文件1.txt。
 
-![compiler1/image2.png](/images/compiler1/image2.png)
+![compiler1/image2.png](http://server.killuayz.top:8089/images/2023/05/26/compile1-image2.png)
 打开1.txt就能看到结果
-![compiler1/image3.png](/images/compiler1/image3.png)
+![compiler1/image3.png](http://server.killuayz.top:8089/images/2023/05/26/compile1-image3.png)
 实验结果与源码比对，符合预期要求。
 

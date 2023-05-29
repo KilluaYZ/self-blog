@@ -1,7 +1,7 @@
 ---
 title: 程序设计安全（第一章——引论）
 date: 2022-09-05 17:30:21
-tags: 课堂笔记
+tags: 安全
 ---
 > 申明：该系列文章为课堂笔记，主要是为了自己整理笔记方便。其中大量内容来自老师课上讲解和教材，所以我不一一标注引用（侵权必删）。
 
@@ -9,7 +9,7 @@ tags: 课堂笔记
 
 ​		2003年8月11日，爆发了Blaster（冲击波）蠕虫病毒，至少800万台计算机被感染，造成经济损失超过30亿美元。它很好地向我们展示了软件中的安全漏洞如何使我们变得易受攻击。
 
-​		![Blaster timeline](http://43.138.62.72/data/blog-data/course/program-security/chapter1/Blaster.png)
+​		![Blaster.png](http://server.killuayz.top:8089/images/2023/05/26/Blaster.png)
 
 **漏洞原理**
 
@@ -56,7 +56,7 @@ error_status_t _RemoteActivation(
 
 #### 1.2.1 安全角色与关系
 
-![image-20220905133534080](http://43.138.62.72/data/blog-data/course/program-security/chapter1/roles.png)
+![roles.png](http://server.killuayz.top:8089/images/2023/05/26/roles.png)
 
 - Programmer 负责源码正确性，效率和安全性。
 - System integrator 负责将新创造的或现有的软件整合成一个新的系统，以满足特定需求。
@@ -111,8 +111,7 @@ error_status_t _RemoteActivation(
 
 **流行**，C/C++是运用最广泛的语言，几乎所有系统软件都由C/C++来编写。
 
-![编程语言排名2021.09](http://43.138.62.72/data/blog-data/course/program-security/chapter1/ranking.png)
-
+![ranking.png](http://server.killuayz.top:8089/images/2023/05/26/ranking.png)
 
 
 #### 1.3.2 C语言精神
@@ -181,7 +180,8 @@ int i = 10;
 printf("%lf",i);
 ```
 
-![test1](http://43.138.62.72/data/blog-data/course/program-security/chapter1/test1.png)
+
+![test1.png](http://server.killuayz.top:8089/images/2023/05/26/test1.png)
 
 ​		可见输出为0，而非10，编译器并未提醒。		
 
@@ -192,7 +192,8 @@ int a[20];
 printf("%d",a[999]);
 ```
 
-​		![test2](http://43.138.62.72/data/blog-data/course/program-security/chapter1/test2.png)
+​		
+       ![test2.png](http://server.killuayz.top:8089/images/2023/05/26/test2.png)
 
 ​		编译器能正常通过，a[999]也能被访问到。
 
@@ -213,7 +214,7 @@ res2 = A - B;	//number
 
 执行结果为
 
-![test3](http://43.138.62.72/data/blog-data/course/program-security/chapter1/test3.png)
+![test3.png](http://server.killuayz.top:8089/images/2023/05/26/test3.png)
 
 ​		在执行A+B时，系统默认+是字符连接符，所以A被隐式地转换成了string类型，与B连接在一起成了'105'。在执行A-B时，系统默认-是算数运算符，所以B被隐式地转换为了number类型，结果就是5 。
 
