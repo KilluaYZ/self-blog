@@ -1,0 +1,8 @@
+{
+	apps:[{
+		name: "hexo-server",
+		script: "hexo server -p 8222",
+		error_file: "/home/killuayz/self-blog/error.log",
+		out_file: "/home/killuayz/self-blog/out.log"
+	}]
+}

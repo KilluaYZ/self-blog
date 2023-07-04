@@ -1,7 +1,7 @@
 ---
 title: 编译原理实验SysY-词法分析器
 date: 2023-05-18 15:03:58
-tags: 编译
+tags: [编译, 编译原理, 编译原理实验, SysY, 词法, 词法分析器, lex, flex]
 ---
 > 源代码：[KilluaYZ/sys-y-compiler (github.com)](https://github.com/KilluaYZ/sys-y-compiler)
 # 1.实验目标

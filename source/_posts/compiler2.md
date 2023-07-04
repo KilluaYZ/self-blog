@@ -1,7 +1,7 @@
 ---
 title: 编译原理实验SysY-语法分析器
 date: 2023-05-18 17:55:19
-tags: 编译
+tags: [编译, 编译原理, 编译原理实验, SysY, 语法, 语法分析器, yacc, bison]
 ---
 > 源代码：[KilluaYZ/sys-y-compiler (github.com)](https://github.com/KilluaYZ/sys-y-compiler)
 ## 实验目的
