@@ -1,8 +1,10 @@
 {
-	apps:[{
+	apps: [
+		{
 		name: "hexo-server",
-		script: "hexo server -p 6019",
-		error_file: "/var/log/self-blog/error.log",
-		out_file: "/var/log/self-blog/out.log"
-	}]
+		script: "hexo server -p 6030",
+		error_file: "/home/ziyang/self-blog/error.log",
+		out_file: "/home/ziyang/self-blog/out.log"
+		}
+	]
 }
